@@ -1,10 +1,11 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h, getAssetPath } from '@stencil/core';
 import { format } from '../../utils/utils';
 
 @Component({
   tag: 'my-component',
   styleUrl: 'my-component.css',
-  shadow: true,
+ assetsDirs: ['assets'], 
+/*   shadow: true, */
 })
 export class MyComponent {
   /**
@@ -21,12 +22,17 @@ export class MyComponent {
    * The last name
    */
   @Prop() last: string;
+  @Prop() image = "imagentest.png";
 
   private getText(): string {
     return format(this.first, this.middle, this.last);
   }
 
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    const imageSrc = getAssetPath('./assets/imagentest.png');
+  
+    return <div>Hello, World! I'm {this.getText()}
+    <img src={imageSrc} />
+    </div>;
   }
 }

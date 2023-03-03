@@ -1,4 +1,4 @@
-# citelis-footer
+# footer-citelis-component
 
 
 
@@ -9,7 +9,6 @@
 
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
-| `image`  | `image`   |             | `string` | `"so.png"`  |
 | `text`   | `text`    |             | `string` | `undefined` |
 
 
