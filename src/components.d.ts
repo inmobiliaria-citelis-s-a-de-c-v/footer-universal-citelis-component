@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface CitelisFooter {
+        "data": string[];
         "fetchPokemon": (name: any) => Promise<any>;
         "image": string;
         "negocios": [];
@@ -59,6 +60,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface CitelisFooter {
+        "data"?: string[];
         "image"?: string;
         "negocios"?: [];
         "position"?: string;

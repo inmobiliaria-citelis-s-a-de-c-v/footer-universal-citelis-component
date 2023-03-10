@@ -94,6 +94,89 @@
     margin-top: 5px;
 }
 
+.accordion {
+ /*    background-color: #EFEFEF;
+    color: #121F3E;
+    height:42px ;
+    width: 100%;
+    border:1px solid #121F3E;
+    opacity: 1;
+    padding: 10px;
+    cursor: pointer;
+    padding: 18px;
+    text-align: left;
+    outline: none;
+    transition: 0.4s; */
+    background-color: #EFEFEF;
+    color: #121F3E;
+    height:42px ;
+    width: 100%;
+    border:1px solid #121F3E;
+    opacity: 1;
+   
+
+    padding: 10px;
+
+}
+
+    .active, .accordion:hover {
+        background-color: #EFEFEF;
+    }
+  
+   /*  button color n font */
+  .accordion:after {
+    content: '\002B';
+    color: #616160;
+    font-weight: bold;
+    float: right;
+    margin-right: 170px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+/* ::::::::::::::::::::::::::: ESTILOS HIBRIDO :::::::::::::::::::::: */
+.headerAccordion {
+
+       background-color: #EFEFEF;
+       color: #121F3E;
+       height:42px ;
+       width: 100%;
+       border:1px solid #121F3E;
+       opacity: 1;
+       padding: 10px;
+
+       
+   
+   }
+
+   .active, .headerAccordion:hover {
+    background-color: #ed8080;
+}
+
+/*  button color n font */
+.headerAccordion:after {
+content: '\002B';
+color: #616160;
+font-weight: bold;
+float: right;
+margin-right: 170px;
+}
+
+
+
+
+
+
 /*:::::Pie de Pagina*/
 .imageSocialIcon{
     display: block;
@@ -143,7 +226,6 @@
     height:42px ;
     width: 100%;
     border:1px solid #121F3E;
-
     opacity: 1;
     padding: 10px;
   }

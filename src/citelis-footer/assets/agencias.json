@@ -14,45 +14,105 @@
         "tipo":"esfera",
         "url":"https://espaciomonterrey.com"
         },
-        "esfera morelia":{
+        "esfera bike park mty":{
             "tipo":"esfera",
             "url":"https://espaciomonterrey.com"
         },
-        "escala celaya":{
+        "soho panamá":{
             "tipo":"esfera",
             "url":"https://espaciomonterrey.com"
         },
-        "escala morelia":{
-            "tipo":"esfera",
-            "url":"https://espaciomonterrey.com"
-        },
-        "escala la huerta":{
-            "tipo":"esfera",
-            "url":"https://espaciomonterrey.com"
-        },
-        "escala parral":{
-            "tipo":"esfera",
-            "url":"https://espaciomonterrey.com"
-        },
-        "galeria del zapato":{
-            "tipo":"esfera",
-            "url":"https://espaciomonterrey.com"
-        },
-        "soho":{
-            "tipo":"esfera",
-            "url":"https://espaciomonterrey.com"
-        },
-        "espacio culiacán":{
+        "escala las américas":{
             "tipo":"esfera",
             "url":"https://espaciomonterrey.com"
         }
     },
-    "Citelis mobility": {
-        "ford celaya":{
+    "citelis Mobility": {
+        "mazda ecatepec":{
             "tipo":"agencia",
             "url":"https://espaciomonterrey.com"
         },
-        "mazda san luis": {
+        "ford ravisa las américas": {
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "ford ravisa periodismo":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "ford ravisa celaya":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "ford ravisa querétaro":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "hino ravisa morelia":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "hino ravisa cdmx":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "jac store morelia":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "jac store leon":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "jac store san luis":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "jac escala morelia":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "mazda ravisa morelia":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "mazda ravisa uruapan":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "mazda lázaro cárdenas":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "mazda lomas":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "mazda carranza":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "mazda carretera 57":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "mazda ravisa coacalco":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "mercedes-benz querétaro constituyentes":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "mercedes-benz start class querétaro":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "sigo sobre ruedas":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "wiximo":{
             "tipo":"agencia",
             "url":"https://espaciomonterrey.com"
         }

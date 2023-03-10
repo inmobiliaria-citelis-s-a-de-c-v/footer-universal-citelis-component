@@ -1,4 +1,4 @@
-import { Component, Prop, h ,getAssetPath,Method,State} from '@stencil/core';
+import { Component, Prop, h ,getAssetPath,Method,State,Element} from '@stencil/core';
 import citelis from './assets/agencias.json'; // This import style requires "esModuleInterop", see "side notes"
 
 @Component({
@@ -14,16 +14,50 @@ export class CitFooter {
     @Prop() negocios: [];
 
     @State() value: string;
+    @Element() private element: HTMLElement;
+    @Prop() data: string[];
 
+    constructor() {
+        this.data = ['one', 'two', 'three', 'four'];
+        console.log(this.element); // outputs undefined
+    }
+
+    // child elements will only exist once the component has finished loading
+    componentDidLoad() {
+       /*  console.log(this.element); // outputs HTMLElement <my-component ... */
+
+        // loop over NodeList as per https://css-tricks.com/snippets/javascript/loop-queryselectorall-matches/
+        const list = this.element.shadowRoot.querySelectorAll('.accordion');
+        [].forEach.call(list, li => li.addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          })
+            
+            
+            ); 
+        console.log("mi elemento vital")
+        console.log(list); // outputs HTMLElement <my-component ...
+
+
+
+    }
 
     changeStates(){
-        this.show = true
-    }
+        /* this.show = true */
+        const elementInShadowDom = this.element.shadowRoot.querySelector('.collapsible');
+        console.log(elementInShadowDom);
+        
+    }   
 
     render() {
         {/* ----------------------------- ASSETS AND FONTS  --------------------------- */}
         const imageSrc = getAssetPath('./assets/citelis-favicon.png');
-        const iconSrc = getAssetPath('./assets/discord.svg');
+        /* const iconSrc = getAssetPath('./assets/discord.svg'); */
         const poweredByCit = getAssetPath('./assets/poweredby-logo.webp');
         /*  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">'; */
@@ -48,10 +82,21 @@ export class CitFooter {
         {/* ----------------------------- END ASSETS AND FONTS  --------------------------- */}
 
 
+
+        /*   const toggle = () => {
+            console.log(this.show)
+          };
+        */
+
        /*  this.fetchPokemon('pikachu').then(data => console.log(data)) */
 
       let renderhtml = []; 
       let renderhtml2 = []; 
+      let renderHibrid = [];
+      let renderHibrid2 = [];
+      let renderHibrid3 = [];
+
+
 
 
       /*   console.log(citelis); */
@@ -59,13 +104,16 @@ export class CitFooter {
         
             renderhtml2 = []; 
             renderhtml.push(<div class="collapsible" onClick={this.changeStates.bind(this)} key={index}> <h3 class="textHeader">{key}</h3>  </div>); 
-            console.log("CALAS");
+            renderHibrid2= []; 
+            renderHibrid.push(
+                <button class="accordion" key={index}> <h3 class="textHeader">{key}</h3>  </button>
+            ); 
         
             console.log(key);
             console.log(value);
             console.log(index); 
             
-            //Getting object values
+            //llenando rowgrids
             Object.entries(value).forEach(([key2, value2], index2) => {
                 console.log("On object items");
                 console.log(key2);
@@ -77,8 +125,24 @@ export class CitFooter {
                         <a class="textNegocio" href={value2.url}>{key2}</a>
                     </div>
                 ); 
+
+                //panel hibridop
+                
+                renderHibrid2.push(
+                    /*  <li class="collapsible" onClick={this.changeStates.bind(this)} key={index2}>{key2} </li> */
+                         
+                             <div class="rowgrid">
+                                 <a class="textNegocio" href={value2.url}>{key2}</a>
+                            </div>
+                         
+                     ); 
                 
             });
+
+            renderHibrid3.push(<div class="panel">
+              {renderHibrid2} 
+                
+            </div>);
             
             renderhtml.push(
                 <div class="content">
@@ -87,6 +151,10 @@ export class CitFooter {
                     </div>
                 </div>
             );
+
+            renderHibrid.push(
+                renderHibrid3
+            ); 
         
         });
 
@@ -115,17 +183,74 @@ export class CitFooter {
                     
                 </div>
                 {renderhtml} 
+                {renderHibrid} 
 
-        {/* ------------------------------------- SECCION ACORDEON --------------------------- */}
+
+            {/* ------------------------------------- SECCION ACORDEON  test--------------------------- */}
+            <span>test</span>
+            
+            <p>In this example we have added a "plus" sign to each button. When the user clicks on the button, the "plus" sign is replaced with a "minus" sign.</p>
+            <button class="accordion">Section 1</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <button class="accordion">Section 2</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <button class="accordion">Section 3</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <span>Hibridos</span>
+            
+            <button class="accordion">Section 1</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <button class="accordion">Section 2</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <button class="accordion">Section 3</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+
+
+
+            
 
         
             </footer>
         </div>
+/* 
+ var acc = this.el.getElementsByClassName(".accordion"); 
+ const elementInShadowDom = this.el.shadowRoot.querySelector('.collapsible');
 
-var acc = document.getElementsByClassName("collapsible");
-var i;
-console.log("ACORDEON");
-console.log(acc);
+console.log("ACORDEON RAMONAYALA TEST");
+console.log(acc); */
+
+/* var i;
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+    });
+  }
+
+ */
 
 
 /* for (i = 0; i < acc.length; i++) {
@@ -192,6 +317,8 @@ console.log(acc);
         </div>
                 </footer>
             </div>
+
+            
         }
         
         

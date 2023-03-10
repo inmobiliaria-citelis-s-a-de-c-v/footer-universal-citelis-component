@@ -7,12 +7,13 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type      | Default     |
-| ---------- | ---------- | ----------- | --------- | ----------- |
-| `image`    | `image`    |             | `string`  | `"so.png"`  |
-| `negocios` | --         |             | `[]`      | `undefined` |
-| `position` | `position` |             | `string`  | `undefined` |
-| `show`     | `show`     |             | `boolean` | `undefined` |
+| Property   | Attribute  | Description | Type       | Default     |
+| ---------- | ---------- | ----------- | ---------- | ----------- |
+| `data`     | --         |             | `string[]` | `undefined` |
+| `image`    | `image`    |             | `string`   | `"so.png"`  |
+| `negocios` | --         |             | `[]`       | `undefined` |
+| `position` | `position` |             | `string`   | `undefined` |
+| `show`     | `show`     |             | `boolean`  | `undefined` |
 
 
 ## Methods
