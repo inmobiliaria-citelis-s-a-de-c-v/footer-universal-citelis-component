@@ -1,0 +1,70 @@
+{   
+    "citelis Grupo":{
+        "CITELIS": {
+            "tipo":"corporativo",
+            "url":"https://www.citelis.com.mx/"
+        }
+    },
+    "citelis Real Estate": {
+        "esfera monterrey": {
+                "tipo":"esfera",
+                "url":"https://espaciomonterrey.com"
+        },
+        "esfera querétaro":{
+        "tipo":"esfera",
+        "url":"https://espaciomonterrey.com"
+        },
+        "esfera morelia":{
+            "tipo":"esfera",
+            "url":"https://espaciomonterrey.com"
+        },
+        "escala celaya":{
+            "tipo":"esfera",
+            "url":"https://espaciomonterrey.com"
+        },
+        "escala morelia":{
+            "tipo":"esfera",
+            "url":"https://espaciomonterrey.com"
+        },
+        "escala la huerta":{
+            "tipo":"esfera",
+            "url":"https://espaciomonterrey.com"
+        },
+        "escala parral":{
+            "tipo":"esfera",
+            "url":"https://espaciomonterrey.com"
+        },
+        "galeria del zapato":{
+            "tipo":"esfera",
+            "url":"https://espaciomonterrey.com"
+        },
+        "soho":{
+            "tipo":"esfera",
+            "url":"https://espaciomonterrey.com"
+        },
+        "espacio culiacán":{
+            "tipo":"esfera",
+            "url":"https://espaciomonterrey.com"
+        }
+    },
+    "Citelis mobility": {
+        "ford celaya":{
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        },
+        "mazda san luis": {
+            "tipo":"agencia",
+            "url":"https://espaciomonterrey.com"
+        }
+    },
+    "Citelis hospitality": {
+        "holiday inn express guadalajara expo":{
+            "tipo":"hotel",
+            "url":"https://espaciomonterrey.com"
+        },
+        "Holiday Inn Morelia":{
+            "tipo":"hotel",
+            "url":"https://espaciomonterrey.com"
+        }
+    }
+}
