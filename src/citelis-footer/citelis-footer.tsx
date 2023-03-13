@@ -24,35 +24,23 @@ export class CitFooter {
 
     // child elements will only exist once the component has finished loading
     componentDidLoad() {
-       /*  console.log(this.element); // outputs HTMLElement <my-component ... */
-
-        // loop over NodeList as per https://css-tricks.com/snippets/javascript/loop-queryselectorall-matches/
         const list = this.element.shadowRoot.querySelectorAll('.accordion');
         [].forEach.call(list, li => li.addEventListener("click", function() {
             this.classList.toggle("active");
             var panel = this.nextElementSibling;
             if (panel.style.maxHeight) {
-              panel.style.maxHeight = null;
+                panel.style.maxHeight = null;
             } else {
-              panel.style.maxHeight = panel.scrollHeight + "px";
+                panel.style.maxHeight = panel.scrollHeight + "px";
             } 
-          })
-            
-            
-            ); 
-        console.log("mi elemento vital")
-        console.log(list); // outputs HTMLElement <my-component ...
-
-
-
+        })
+        ); 
     }
 
-    changeStates(){
-        /* this.show = true */
+    /* changeStates(){
         const elementInShadowDom = this.element.shadowRoot.querySelector('.collapsible');
         console.log(elementInShadowDom);
-        
-    }   
+    }    */
 
     render() {
         {/* ----------------------------- ASSETS AND FONTS  --------------------------- */}
@@ -81,97 +69,45 @@ export class CitFooter {
         }
         {/* ----------------------------- END ASSETS AND FONTS  --------------------------- */}
 
-
-
-        /*   const toggle = () => {
-            console.log(this.show)
-          };
-        */
-
+        //ejemplo llamada de funcion
        /*  this.fetchPokemon('pikachu').then(data => console.log(data)) */
 
-      let renderhtml = []; 
-      let renderhtml2 = []; 
-      let renderHibrid = [];
-      let renderHibrid2 = [];
-      let renderHibrid3 = [];
+        {/* ----------------------------- RENDERIZADO DINAMICO DE ACORDEON DEL OBJ CITELIS  --------------------------- */}
+        let renderHibrid = [];
+        let renderHibrid2 = [];
+        let renderHibrid3 = [];
 
-
-
-
-      /*   console.log(citelis); */
         Object.entries(citelis).forEach(([key, value], index) => {
+            renderHibrid2 = [];
+            renderHibrid3 = [];
+            renderHibrid.push(<button class="accordion" key={index}> <h3 class="textHeader">{key}</h3>  </button>); 
         
-            renderhtml2 = []; 
-            renderhtml.push(<div class="collapsible" onClick={this.changeStates.bind(this)} key={index}> <h3 class="textHeader">{key}</h3>  </div>); 
-            renderHibrid2= []; 
-            renderHibrid.push(
-                <button class="accordion" key={index}> <h3 class="textHeader">{key}</h3>  </button>
-            ); 
-        
-            console.log(key);
-            console.log(value);
-            console.log(index); 
-            
-            //llenando rowgrids
+            //llenando rowgrids de marcas
             Object.entries(value).forEach(([key2, value2], index2) => {
-                console.log("On object items");
-                console.log(key2);
-                console.log(value2);
-                console.log(index2); 
-                renderhtml2.push(
-               /*  <li class="collapsible" onClick={this.changeStates.bind(this)} key={index2}>{key2} </li> */
-                    <div class="rowgrid">
-                        <a class="textNegocio" href={value2.url}>{key2}</a>
-                    </div>
-                ); 
-
-                //panel hibridop
-                
+                //row gris de 6 push
                 renderHibrid2.push(
-                    /*  <li class="collapsible" onClick={this.changeStates.bind(this)} key={index2}>{key2} </li> */
-                         
-                             <div class="rowgrid">
-                                 <a class="textNegocio" href={value2.url}>{key2}</a>
+                            <div class="rowgrid">
+                                <a class="textNegocio" href={value2.url} key={index2}>{key2}</a>
                             </div>
-                         
-                     ); 
-                
+                ); 
             });
 
-            renderHibrid3.push(<div class="panel">
-              {renderHibrid2} 
-                
-            </div>);
-            
-            renderhtml.push(
-                <div class="content">
-                    <div class="grupo-1">
-                    {renderhtml2}
-                    </div>
+            renderHibrid3.push(<div class="content">
+                <div class="grupo-1">
+                    {renderHibrid2}
                 </div>
-            );
+            </div>); 
 
-            renderHibrid.push(
-                renderHibrid3
+            renderHibrid.push(<div class="panel">
+                    {renderHibrid3}
+                </div>
             ); 
         
         });
 
-      
-
-
-        /* const elements = ['one', 'two', 'three'];
-        const items = []
-        for (const [index, value] of elements.entries()) {
-            items.push(
-            <small key={index} class="textCitelis">&copy; Copyright © 2023 {value} citelis®. Todos los derechos reservados. </small>
-            )
-        } */
-
         {/* ----------------------------- fixed footer --------------------------- */}
         let fixedFooter = <div>
-            <footer class="pie-pagina pie-position-rel">
+            <footer class="pie-pagina pie-position-abs">
                 <div class="grupo-4">
                     {/* {items} */}
                     <span class="textCopyright">Copyright © 2023 citelis®. Todos los derechos reservados. </span>
@@ -182,104 +118,11 @@ export class CitFooter {
                     <p class="textAviso"><a class="textAviso" href='/'>Aviso de privacidad</a></p>
                     
                 </div>
-                {renderhtml} 
                 {renderHibrid} 
-
-
-            {/* ------------------------------------- SECCION ACORDEON  test--------------------------- */}
-            <span>test</span>
-            
-            <p>In this example we have added a "plus" sign to each button. When the user clicks on the button, the "plus" sign is replaced with a "minus" sign.</p>
-            <button class="accordion">Section 1</button>
-            <div class="panel">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <button class="accordion">Section 2</button>
-            <div class="panel">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <button class="accordion">Section 3</button>
-            <div class="panel">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <span>Hibridos</span>
-            
-            <button class="accordion">Section 1</button>
-            <div class="panel">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <button class="accordion">Section 2</button>
-            <div class="panel">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <button class="accordion">Section 3</button>
-            <div class="panel">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-
-
-
-            
-
-        
             </footer>
         </div>
-/* 
- var acc = this.el.getElementsByClassName(".accordion"); 
- const elementInShadowDom = this.el.shadowRoot.querySelector('.collapsible');
+        {/* ----------------------------- end fixed footer --------------------------- */}
 
-console.log("ACORDEON RAMONAYALA TEST");
-console.log(acc); */
-
-/* var i;
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      } 
-    });
-  }
-
- */
-
-
-/* for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}  */
-
-/* const showSlides = () => {
-    const slides = document.getElementsByClassName('accordion');
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-              panel.style.display = "none";
-            } else {
-              panel.style.display = "block";
-            }
-        });
-    }
-}; */
 
         if (this.position == 'fixed'){
             /* return  fixedFooter; */
@@ -287,7 +130,7 @@ for (i = 0; i < acc.length; i++) {
         }else if (this.position == 'relative'){
             return <div>
                 <footer class="pie-pagina pie-position-rel">
-        <div class="grupo-1">
+                    <div class="grupo-1">
             <div class="box">
                 <figure>
                     <a href="#">
@@ -311,10 +154,10 @@ for (i = 0; i < acc.length; i++) {
                     <a href="#" class="fa fa-youtube"></a>
                 </div>
             </div>
-        </div>
-        <div class="grupo-2">
-            <small>&copy; Todos los Derechos Reservados <b>citelis</b> 2023 </small>
-        </div>
+                    </div>
+                    <div class="grupo-2">
+                        <small>&copy; Todos los Derechos Reservados <b>citelis</b> 2023 </small>
+                    </div>
                 </footer>
             </div>
 

@@ -31,7 +31,7 @@
    /*  font-family: 'Mazda'; */
 }
 
-/* ::::::::::IMAGEN CITELOS ::::::::: */
+/* ::::::::::IMAGEN CITELIS ::::::::: */
 .logoCitelis{
     height: 20px;
     max-width: 100%;
@@ -47,7 +47,6 @@
     letter-spacing: 0px;
     color: #121F3E;
     opacity: 1;
-
 }
 
 .textAviso{
@@ -77,7 +76,7 @@
     opacity: 1;
     text-align: left;
     padding: 2px;
-    margin-left: 150px;
+    margin-left:80px;
     
 }
 
@@ -107,9 +106,10 @@
     text-align: left;
     outline: none;
     transition: 0.4s; */
+    transition: 0.4s;
     background-color: #EFEFEF;
     color: #121F3E;
-    height:42px ;
+    height:42px;
     width: 100%;
     border:1px solid #121F3E;
     opacity: 1;
@@ -126,27 +126,31 @@
    /*  button color n font */
   .accordion:after {
     content: '\002B';
-    color: #616160;
+    color: #121F3E;
     font-weight: bold;
     float: right;
     margin-right: 170px;
+    margin-top: -20px;
+    transition: 1s;
+
   }
   
   .active:after {
     content: "\2212";
+    transition: .8s;
+
   }
   
   .panel {
     padding: 0 18px;
-    background-color: white;
+    background-color:#EFEFEF;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.4s ease-in-out;
   }
 
 /* ::::::::::::::::::::::::::: ESTILOS HIBRIDO :::::::::::::::::::::: */
 .headerAccordion {
-
        background-color: #EFEFEF;
        color: #121F3E;
        height:42px ;
@@ -154,28 +158,20 @@
        border:1px solid #121F3E;
        opacity: 1;
        padding: 10px;
-
-       
-   
    }
 
    .active, .headerAccordion:hover {
-    background-color: #ed8080;
+    background-color: #EFEFEF;
 }
 
 /*  button color n font */
 .headerAccordion:after {
 content: '\002B';
-color: #616160;
+color: #EFEFEF;
 font-weight: bold;
 float: right;
 margin-right: 170px;
 }
-
-
-
-
-
 
 /*:::::Pie de Pagina*/
 .imageSocialIcon{
@@ -190,7 +186,9 @@ margin-right: 170px;
 }
 
 .rowgrid{
-    height: 40px;
+    height: 35px;
+    text-align:left;
+    margin-left: 56px;
 }
 
 .textCitelis{
@@ -206,8 +204,6 @@ margin-right: 170px;
     color: white;
     text-align: center;
 }
-
-
 
 .pie-position-rel{
     position: relative;
@@ -228,16 +224,17 @@ margin-right: 170px;
     border:1px solid #121F3E;
     opacity: 1;
     padding: 10px;
-  }
-  
-  .active, .collapsible:hover {
-    background-color: #dddcdc;
-  }
+}
+
+/*   HOVER COLOR DEL HEADER */
+/*   .active, .collapsible:hover {
+    background-color: #EFEFEF;
+  } */
   
   .content {
     padding: 0 18px;
-    display: block;
-    overflow: hidden;
+ /*    display: block; */
+    overflow:visible;
     background-color: #EFEFEF;
   }
 
@@ -249,44 +246,11 @@ margin-right: 170px;
     margin: auto;
     display:grid;
     grid-template-columns: repeat(6, 1fr);
-    background-color: #EFEFEF;
-    justify-content: center;
-    align-items: center;
+  /*   background-color: #EFEFEF; */
+   /*  justify-content: center; */
+    /* align-items: left; */
 }
-.pie-pagina .grupo-1 .box figure{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.pie-pagina .grupo-1 .box figure img{
-    width: 250px;
-}
-.pie-pagina .grupo-1 .box h2{
-    color: #fff;
-    margin-bottom: 25px;
-    font-size: 20px;
-}
-.pie-pagina .grupo-1 .box p{
-    color: #efefef;
-    margin-bottom: 10px;
-}
-.pie-pagina .grupo-1 .red-social a{
-    display: inline-block;
-    text-decoration: none;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    color: #fff;
-    margin-right: 10px;
-    background-color: #ffffff;
-    text-align: center;
-    transition: all 300ms ease;
-}
-.pie-pagina .grupo-1 .red-social a:hover{
-    color: aqua;
-}
+
 .pie-pagina .grupo-2{
     background-color:#EFEFEF;
     padding: 5px; 
@@ -295,15 +259,13 @@ margin-right: 170px;
     border-right: 1px solid #121F3E;
     border-left: 1px solid #121F3E;
     border-top: 1px solid #121F3E;
-opacity: 1;
- /*    border-style: solid;
+    opacity: 1;
+    /*    border-style: solid;
     border-width: 5px; */
 }
 .pie-pagina .grupo-2 small{
     font-size: 15px;
 }
-
-
 
 .pie-pagina .grupo-3{
     background-color: #F5F5F5;
@@ -314,7 +276,6 @@ opacity: 1;
 .pie-pagina .grupo-3 small{
     font-size: 15px;
 }
-
 
 .pie-pagina .grupo-4{
     background-color: #FFFFFF;
@@ -330,12 +291,19 @@ opacity: 1;
 input[type='checkbox'] { display: none; } .wrap-collabsible { margin: 1.2rem 0; } .lbl-toggle { display: block; font-weight: bold; font-family: monospace; font-size: 1.2rem; text-transform: uppercase; text-align: center; padding: 1rem; color: #DDD; background: #0069ff; cursor: pointer; border-radius: 7px; transition: all 0.25s ease-out; } .lbl-toggle:hover { color: #FFF; } .lbl-toggle::before { content: ' '; display: inline-block; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 5px solid currentColor; vertical-align: middle; margin-right: .7rem; transform: translateY(-2px); transition: transform .2s ease-out; } .toggle:checked+.lbl-toggle::before { transform: rotate(90deg) translateX(-3px); } .collapsible-content { max-height: 0px; overflow: hidden; transition: max-height .25s ease-in-out; } .toggle:checked + .lbl-toggle + .collapsible-content { max-height: 350px; } .toggle:checked+.lbl-toggle { border-bottom-right-radius: 0; border-bottom-left-radius: 0; } .collapsible-content .content-inner { background: rgba(0, 105, 255, .2); border-bottom: 1px solid rgba(0, 105, 255, .45); border-bottom-left-radius: 7px; border-bottom-right-radius: 7px; padding: .5rem 1rem; } .collapsible-content p { margin-bottom: 0; }
 
 
-
 @media screen and (max-width:800px){
     .pie-pagina .grupo-1{
-        width: 90%;
+        width: 100%;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap:30px;
+        grid-gap:20px;
         padding: 35px 0px;
     }
+
+    .rowgrid{
+        height: 35px;
+        text-align:left;
+        margin-left: 20px;
+    }
+
+
 }
