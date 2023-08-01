@@ -38,7 +38,6 @@
 }
 .poweredCitelis{
     width: 141px;
-    height: 18px;
 }
 .textCopyright{
     font-family: 'Metropolis', sans-serif;
@@ -277,14 +276,14 @@ margin-right: 170px;
     font-size: 15px;
 }
 
-.pie-pagina .grupo-4{
+.pie-pagina .fila-top{
     background-color: #FFFFFF;
     padding: 5px;
     height: 28px;
     text-align: center;
     color: #3F3F3F;
 }
-/* .pie-pagina .grupo-4 small{
+/* .pie-pagina .fila-top small{
     font-size: 15px;
 } */
 

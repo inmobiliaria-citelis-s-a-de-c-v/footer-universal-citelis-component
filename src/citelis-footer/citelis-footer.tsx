@@ -46,7 +46,8 @@ export class CitFooter {
         {/* ----------------------------- ASSETS AND FONTS  --------------------------- */}
         const imageSrc = getAssetPath('./assets/citelis-favicon.png');
         /* const iconSrc = getAssetPath('./assets/discord.svg'); */
-        const poweredByCit = getAssetPath('./assets/poweredby-logo.webp');
+        //const poweredByCit = getAssetPath('./assets/poweredby-logo.webp');
+        const poweredByCit = 'https://storage.googleapis.com/citelis-assets/footer/powered-by-citelis.png'
         /*  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">'; */
         const font = 'https://fonts.gstatic.com'
@@ -108,7 +109,7 @@ export class CitFooter {
         {/* ----------------------------- fixed footer --------------------------- */}
         let fixedFooter = <div>
             <footer class="pie-pagina pie-position-abs">
-                <div class="grupo-4">
+                <div class="fila-top">
                     {/* {items} */}
                     <span class="textCopyright">Copyright © 2023 citelis®. Todos los derechos reservados. </span>
                 </div>
