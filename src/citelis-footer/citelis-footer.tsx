@@ -111,7 +111,7 @@ export class CitFooter {
             <footer class="pie-pagina pie-position-abs">
                 <div class="fila-top">
                     {/* {items} */}
-                    <span class="textCopyright">Copyright © 2023 citelis®. Todos los derechos reservados. </span>
+                    <span part='textCopyright' class="textCopyright">Copyright © 2023 citelis®. Todos los derechos reservados. </span>
                 </div>
                 <div class="grupo-2">
                     <img class="poweredCitelis" src={poweredByCit} /> 
