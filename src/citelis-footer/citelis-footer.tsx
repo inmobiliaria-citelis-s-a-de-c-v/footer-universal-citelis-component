@@ -254,10 +254,12 @@ export class CitFooter {
         {/* ----------------------------- absolute footer --------------------------- */}
         let absoluteFooter = <div>
             <footer class="pie-pagina pie-position-abs">
-                <div class="grupo-4">
+            <div class={{ 'clase-dark': this.theme === 'dark', 'clase-light': this.theme === 'light' }}>
                     {/* {items} */}
                     <span class="textCopyright">Copyright © 2023 citelis®. Todos los derechos reservados. </span>
                 </div>
+
+                
                 <div class="grupo-2">
                     <img class="poweredCitelis" src={poweredByCit} />
                     <h6 class="texConoce">Conoce más de citelis ® y sus unidades de negocio</h6>
@@ -294,10 +296,12 @@ export class CitFooter {
         {/* ----------------------------- relative footer --------------------------- */}
         let relativeFooter = <div>
             <footer class="pie-pagina pie-position-rel">
-                <div class="grupo-4">
+            <div class={{ 'clase-dark': this.theme === 'dark', 'clase-light': this.theme === 'light' }}>
                     {/* {items} */}
                     <span class="textCopyright">Copyright © 2023 citelis®. Todos los derechos reservados. </span>
                 </div>
+
+                
                 <div class="grupo-2">
                     <img class="poweredCitelis" src={poweredByCit} />
                     <h6 class="texConoce">Conoce más de citelis ® y sus unidades de negocio</h6>
