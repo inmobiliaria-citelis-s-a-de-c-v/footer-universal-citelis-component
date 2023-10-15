@@ -14,6 +14,7 @@
 | `negocios` | --         |             | `[]`       | `undefined` |
 | `position` | `position` |             | `string`   | `undefined` |
 | `show`     | `show`     |             | `boolean`  | `undefined` |
+| `theme`    | `theme`    |             | `string`   | `undefined` |
 
 
 ## Methods

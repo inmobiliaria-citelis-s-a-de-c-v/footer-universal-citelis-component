@@ -13,6 +13,7 @@ export namespace Components {
         "negocios": [];
         "position": string;
         "show": boolean;
+        "theme": string;
     }
     interface FooterCitelisComponent {
         "text": string;
@@ -65,6 +66,7 @@ declare namespace LocalJSX {
         "negocios"?: [];
         "position"?: string;
         "show"?: boolean;
+        "theme"?: string;
     }
     interface FooterCitelisComponent {
         "text"?: string;
