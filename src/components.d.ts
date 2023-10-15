@@ -15,9 +15,6 @@ export namespace Components {
         "show": boolean;
         "theme": string;
     }
-    interface FooterCitelisComponent {
-        "text": string;
-    }
     interface MyComponent {
         /**
           * The first name
@@ -41,12 +38,6 @@ declare global {
         prototype: HTMLCitelisFooterElement;
         new (): HTMLCitelisFooterElement;
     };
-    interface HTMLFooterCitelisComponentElement extends Components.FooterCitelisComponent, HTMLStencilElement {
-    }
-    var HTMLFooterCitelisComponentElement: {
-        prototype: HTMLFooterCitelisComponentElement;
-        new (): HTMLFooterCitelisComponentElement;
-    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -55,7 +46,6 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "citelis-footer": HTMLCitelisFooterElement;
-        "footer-citelis-component": HTMLFooterCitelisComponentElement;
         "my-component": HTMLMyComponentElement;
     }
 }
@@ -67,9 +57,6 @@ declare namespace LocalJSX {
         "position"?: string;
         "show"?: boolean;
         "theme"?: string;
-    }
-    interface FooterCitelisComponent {
-        "text"?: string;
     }
     interface MyComponent {
         /**
@@ -88,7 +75,6 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "citelis-footer": CitelisFooter;
-        "footer-citelis-component": FooterCitelisComponent;
         "my-component": MyComponent;
     }
 }
@@ -97,7 +83,6 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "citelis-footer": LocalJSX.CitelisFooter & JSXBase.HTMLAttributes<HTMLCitelisFooterElement>;
-            "footer-citelis-component": LocalJSX.FooterCitelisComponent & JSXBase.HTMLAttributes<HTMLFooterCitelisComponentElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
