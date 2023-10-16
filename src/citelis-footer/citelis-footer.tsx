@@ -298,7 +298,7 @@ export class CitFooter {
             <footer class="pie-pagina pie-position-rel">
             <div class={{ 'clase-dark': this.theme === 'dark', 'clase-light': this.theme === 'light' }}>
                     {/* {items} */}
-                    <span class="textCopyright">Copyright © 2023 citelis®. Todos los derechos reservados. </span>
+                    <span class="textCopyright">Copyright © 2023 citelis®. Todos los derechos reservados. ??</span>
                 </div>
 
                 

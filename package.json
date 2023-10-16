@@ -1,6 +1,6 @@
 {
   "name": "@cit/footer-citelis-component",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "footer for citelis",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
