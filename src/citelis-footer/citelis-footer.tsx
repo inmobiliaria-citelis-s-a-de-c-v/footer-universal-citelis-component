@@ -262,7 +262,7 @@ export class CitFooter {
                 
                 <div class="grupo-2">
                     <img class="poweredCitelis" src={poweredByCit} />
-                    <h6 class="texConoce">Conoce más de citelis ® y sus unidades de negocio PR</h6>
+                    <h6 class="texConoce">Conoce más de citelis ® y sus unidades de negocio</h6>
                     <p class="textAviso"><a class="textAviso" href='https://www.citelis.com.mx/assets/docs/aviso-de-privacidad.pdf' target="_blank" >Aviso de privacidad</a></p>
 
                 </div>

@@ -17,7 +17,7 @@
   "files": [
     "dist/",
     "loader/",
-    "hydrate"
+    "hydrate/"
   ],
   "scripts": {
     "build": "stencil build --docs",
